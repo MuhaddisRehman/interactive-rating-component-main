@@ -17,6 +17,7 @@
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
   --medium-grey: hsl(216, 12%, 54%);
+  --medium-blue: #2c3842;
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
   --primary-font-family: "Overpass", sans-serif;
@@ -24,6 +25,9 @@
 body {
   font-family: var(--primary-font-family);
   background-color: var(--very-dark-blue);
+}
+p {
+  font-size: 15px;
 }
 .card-description {
   color: var(--light-grey);
@@ -34,6 +38,9 @@ body {
 }
 .h-100vh {
   min-height: 100vh;
+}
+.text-center {
+  text-align: center;
 }
 /* resets */
 ul {
@@ -50,7 +57,7 @@ ul {
   background-color: var(--dark-blue);
   color: var(--white);
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   max-width: 25rem;
   margin: 1rem;
 }
@@ -62,7 +69,7 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #2c3842;
+  background-color: var(--medium-blue);
   max-width: 3rem;
   max-height: 3rem;
   padding: 1rem;
@@ -77,7 +84,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2c3842;
+  background-color: var(--medium-blue);
   width: 3rem;
   height: 3rem;
   text-align: center;
@@ -89,11 +96,11 @@ ul {
   background-color: var(--orange);
   color: var(--white);
 }
-.rating-list > li:hover + li {
+/* .rating-list > li:hover + li {
   transition: all 0.5s ease;
   background-color: var(--medium-grey);
   color: var(--white);
-}
+} */
 /* card button */
 .card-btn {
   color: inherit;
@@ -115,6 +122,20 @@ ul {
   color: var(--orange);
 }
 
+.card-highlight {
+  background-color: var(--medium-blue);
+  border-radius: 2rem;
+  color: var(--orange);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  margin-block: 1rem 2rem;
+}
+
+/* selected state for rating */
+.selected {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
 .attribution {
   color: var(--white);
 }

@@ -11,14 +11,14 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script defer src="../index.js"></script>
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body class="flex-box h-100vh">
     <!-- Rating state start -->
 
-    <div class="card">
+    <!-- <div class="card">
       <div class="icon">
         <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -40,21 +40,21 @@
         <li>5</li>
       </ul>
       <button class="card-btn">Submit</button>
-    </div>
+    </div> -->
 
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
 
-    <!-- <div class="card flex-box">
-      <img src="./images/illustration-thank-you.svg" alt="" />
+    <div class="card flex-box">
+      <img src="../images/illustration-thank-you.svg" alt="" />
       <p class="card-highlight"></p>
       <h2>Thank you!</h2>
       <p class="card-description text-center">
         We appreciate you taking the time to give a rating. If you ever need
         more support, don’t hesitate to get in touch!
       </p>
-    </div> -->
+    </div>
 
     <!-- Thank you state end -->
 
@@ -64,5 +64,10 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Muhaddis</a>.
     </div>
+    <script>
+      const selectedRatingMessage = document.querySelector(".card-highlight");
+      selectedRatingMessage.innerText = `You selected ${selectedRating} here out of 5`;
+      console.log("Selected Rating:", selectedRating);
+    </script>
   </body>
 </html>
