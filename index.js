@@ -19,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  submitBtn &&
-    submitBtn.addEventListener("click", () => {
-      window.location.href = "/pages/thankYou.html";
-    });
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent the form's default submission behavior
+    const urlParams = new URLSearchParams(`rating=${selectedRating}`);
+    window.location.href = `/pages/thankYou.html?${urlParams}`;
+  }
+
+  document
+    .getElementById("ratingForm")
+    .addEventListener("submit", handleSubmit);
 });
